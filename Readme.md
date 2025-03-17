@@ -59,10 +59,11 @@ TaskManagement — это REST API для управления задачами,
    server:
      port: 9001
    ```
-4. Соберите и запустите проект:
+4. Соберите и запустите проект
+
+   в папке где находиться pom.xml напишите:
    ```bash
    mvn clean install
-   mvn spring-boot:run
    ```
 
 ### Запуск с Docker
