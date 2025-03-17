@@ -2,39 +2,33 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile name="Annotation profile for Auth-service" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
-        </processorPath>
-        <module name="Auth-service" />
-      </profile>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Eureka-Service" />
-        <module name="Gateway-service" />
       </profile>
-      <profile name="Annotation profile for User-Service" enabled="true">
+      <profile name="Annotation profile for Service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
         </processorPath>
-        <module name="User-Service" />
+        <module name="Service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Auth-service" target="17" />
+      <module name="Eureka-Service" target="17" />
+      <module name="Gateway-service" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Auth-service" options="-parameters" />
       <module name="Eureka-Service" options="-parameters" />
       <module name="Gateway-service" options="-parameters" />
-      <module name="User-Service" options="-parameters -parameters" />
+      <module name="Service" options="-parameters -parameters" />
     </option>
   </component>
 </project>
