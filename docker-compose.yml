@@ -9,13 +9,13 @@ services:
       - 'POSTGRES_USER=postgres'
     ports:
       - '5432:5432'
-  user-service:
+  task_management:
     environment:
       SPRING_DATASOURCE_URL1: jdbc:postgresql://postgres_bd:5432/users
       SPRING_DATASOURCE_USERNAME1: postgres
       SPRING_DATASOURCE_PASSWORD1: postgres
     build:
-      context: ./User-Service
+      context: ./task_management
       dockerfile: Dockerfile
     ports:
       - "8001:9001"
